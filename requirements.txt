@@ -1,0 +1,8 @@
+Django
+Markdown
+requests
+martor
+gunicorn
+pyodbc
+python-dotenv
+django_redis
