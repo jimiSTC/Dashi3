@@ -12,7 +12,7 @@ RUN mkdir -p /opt/app/pip_cache
 RUN mkdir -p /opt/app/martor_demo
 COPY requirements.txt start-server.sh /opt/app/
 COPY .pip_cache /opt/app/pip_cache/
-COPY martor_demo /opt/app/martor_demo/
+COPY Dashi3 /opt/app/Dashi3/
 WORKDIR /opt/app
 
 RUN apt-get update && apt-get install -y --no-install-recommends \
