@@ -1,0 +1,9 @@
+{% if row %}
+    <ul>
+    {% for item in row %}
+        <li>Name : {{ item.4}} &#160 &#160 &#160 {{ item.6}}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}

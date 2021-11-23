@@ -1,0 +1,75 @@
+<!link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"><!/script>
+<!script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"><!/script>
+<!------ Include the above in your HEAD tag ---------->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+      <title>Dashi 3.0</title>
+      {% load static %}
+      <link rel="stylesheet" type = 'text/css' href="{% static 'style.css'%}" />
+
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+      <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+      <script type ="text/javascript">
+         $(document).ready(function() {
+                $(".menu-icon").on("click", function() {
+                      $("nav ul").toggleClass("showing");
+                });
+          });
+    
+          // Scrolling Effect
+    
+          $(window).on("scroll", function() {
+                if($(window).scrollTop()) {
+                      $('nav').addClass('black');
+                }
+    
+                else {
+                      $('nav').removeClass('black');
+                }
+          })
+        </script>
+
+
+   </head>
+   <body>
+
+      <div class="wrapper">
+         <header>
+            <nav>
+               <div class="menu-icon">
+                  <i class="fa fa-bars fa-2x"></i>
+               </div>
+               <div class="logo">
+                  Sydney Theatre IT - Dashi 3
+               </div>
+               <div class="menu">
+                  <ul>
+                     <li><a href="#">Home</a></li>
+                     <li><a href="https://tess-devx-bi1.sydneytheatre.com.au/app/main#/home">Analytics</a></li>
+                     <li><a href="#">BO&T</a></li>
+                     <li><a href="#">Philanthropy</a></li>
+                     <li><a href="#">IT</a></li>
+                     <li><a href="#">Education</a></li>
+                  </ul>
+               </div>
+            </nav>
+         </header>
+         <div class="content">
+            {% block content %}
+            {% endblock %}
+            <p>
+
+            </p>
+            <p>
+               
+            </p>
+         </div>
+      </div>
+   </body>
+</html>

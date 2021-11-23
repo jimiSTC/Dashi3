@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.humanize',
+    'dashikombu'
 ]
 
 MIDDLEWARE = [
@@ -123,3 +125,29 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#Cache settings
+CACHES = {
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://10.144.101.116:6379/1",
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    }
+}
+
+#Cache time to live is 60 seconds. 180 for onsale to reduce load. 
+CACHE_TTL = 60
+
+# settings.py
+from dotenv import load_dotenv
+load_dotenv()
+
+# OR, the same with increased verbosity
+load_dotenv(verbose=True)
+
+# OR, explicitly providing path to '.env'
+from pathlib import Path  # Python 3.6+ only
+env_path = Path('.') / '.env'
+load_dotenv(dotenv_path=env_path)

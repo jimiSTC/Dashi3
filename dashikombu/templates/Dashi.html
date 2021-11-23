@@ -1,0 +1,81 @@
+
+<meta http-equiv="refresh" content="45">
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+<p><b>Sales Results for Today</b></p>
+
+<p>Ticket Sales</p>
+{% if SalesResults %}<table>
+    
+    <tr>
+        <div class=tblHead>
+        <!--<th>Id</th>-->
+        <th><b>Season</b></th>
+        <!--<th>Season Id</th>-->
+        <th><b>Production Season</b></th>
+        <th><b>Paid #</b></th>
+        <th><b>Net $</b></th>
+        <th><b>IC</b></th>
+        <th><b>GST</b></th>
+        <th><b>Comps #</b></th>
+        <th><b>Paid # Online</b></th>
+        <th><b>Net $ Online</b></th>
+        <th><b>IC Online</b></th>
+        <th><b>GST Online</b></th>
+    </div>
+    </tr>
+    {% load humanize %}
+    {{ floatvalue|floatformat:2|intcomma }}
+    {% for item in SalesResults %}
+        <tr>
+            <!--<td>{{ item.0}}</td>-->
+            <td>{{ item.3}}</td>
+            <!--<td>{{ item.2}}</td>-->
+            <td>{{ item.1}}</td>
+            <td>{{ item.4|intcomma}}</td>
+            <td>${{ item.5|floatformat:2|intcomma}}</td>
+            <td>${{ item.6|floatformat:2|intcomma}}</td>
+            <td>${{ item.7|floatformat:2|intcomma}}</td>
+            <td>{{ item.8|intcomma}}</td>
+            <td>{{ item.9|intcomma}}</td>
+            <td>${{ item.10|floatformat:2|intcomma}}</td>
+            <td>${{ item.11|floatformat:2|intcomma}}</td>
+            <td>${{ item.12|floatformat:2|intcomma}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}
+
+<p>Donation Results</p>
+{% if DonationResults %}<table>
+    
+    <tr>
+        <div class=tblHead>
+            <th><b>Fund Number</b></th>
+            <th><b>Description</b></th>
+            <th><b>Received Today</b></th>
+    </div>
+    </tr>
+
+    {% for item in DonationResults %}
+        <tr>
+            <td>{{ item.0}}</td>
+            <td>{{ item.1}}</td>
+            <td>${{ item.2|floatformat:2|intcomma}}</td>
+        </tr>
+    {% endfor %}
+    </table>
+{% else %}
+    <p>No results are available.</p>
+{% endif %}
+
+
+
+
+{% endblock %}
+
