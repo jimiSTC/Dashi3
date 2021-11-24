@@ -5,3 +5,4 @@ gunicorn
 pyodbc
 python-dotenv
 django_redis
+tabulate

@@ -21,9 +21,13 @@ database = 'impresario'
 username = os.getenv("pyusername")
 password = os.getenv("pyuser_db_pass")
 
+
+#ODBC Driver 17 for SQL Server
+#/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.0.so.1.1
 def Dashi2():
     #print("test.....................dashi")
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+    cnxn = pyodbc.connect('DRIVER={/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.8.so.1.1};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+    #cnxn = pyodbc.connect('DRIVER={/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.8.so.1.1};SERVER=tcp:stc-tess-db1;DATABASE=impresario;UID=pythonUser;PWD=nawaran2@2@')
     cursor = cnxn.cursor()
     cursor.execute("EXEC [dbo].[LRP_STC_INTRANET_SALES_TODAY]")
     dashi2Results = list(cursor.fetchall())
@@ -38,7 +42,7 @@ def Dashi2():
 
 
 def Donation():
-    cnxn = pyodbc.connect('DRIVER={SQL Server};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
+    cnxn = pyodbc.connect('DRIVER={/opt/microsoft/msodbcsql17/lib64/libmsodbcsql-17.8.so.1.1};SERVER='+server+';DATABASE='+database+';UID='+username+';PWD='+ password)
     cursor = cnxn.cursor()
     cursor.execute("EXEC [dbo].[LRP_STC_DONATIONS_TODAY]")
     dashiDonation = list(cursor.fetchall())
