@@ -15,7 +15,7 @@ load_dotenv(dotenv_path=env_path)
 # Some other example server values are
 # server = 'localhost\sqlexpress' # for a named instance
 # server = 'myserver,port' # to specify an alternate port
-server = 'tcp:stc-tess-db1' 
+server = 'tcp:stc-tess-db1.office.sydneytheatre.com.au' 
 database = 'impresario' 
 
 username = os.getenv("pyusername")
