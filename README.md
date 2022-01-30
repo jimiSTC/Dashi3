@@ -1,5 +1,5 @@
 # Dashi3
-Dashiboard 
+Dashiboard for Sydney Theatre Company: Author Jimmy Ng
 
 
 For those getting a connection error with Microsoft SQL, check the version that it's running on. For SQL2012 the server could still be running on TLS1.0 or 1.1 instead of 1.2 the new minimum version. To resolve this go, once inside the container bash, update /etc/ssl/openssl.cnf to use tls 1.0
@@ -90,18 +90,15 @@ The setting should be at the bottom of the config
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-There are many great README templates available on GitHub; however, I didn't find one that really suited my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need -- I think this is it.
+The project was started due to the lack of funding resources for any good analytics platform within the IT team. The requirement for the Analytics team was a platform that can run and restart easily whilst having the scaling ability to upscale more nodes for future proofing. Additionally Tessitura Analytics had mathematical calculation issues that was taking much longer for Tessitura to resolve than anticipated, hence it was not adopted by the Analytics team at the time. 
 
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+It was decided to consolidate all the languages and use one singular language to meet all solutions for STC until there was appropriate decision made to further expand the IT team's resource. Python was chosen in late 2018, it hosts numerous free analytical tools used by COVID-virus researchers and cancer researchers for statistical calculations. Hence in addition to the IT team, the Analytics team would be able to cross over with troubleshooting Python related issues. 
 
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue. Thanks to all the people have contributed to expanding this template!
+This project plugs directly into MSSQL. It uses open source technology and is used in conjunction with Jupyter notebook. 
 
-Use the `BLANK_README.md` to get started.
+No screenshots provided as they contain sensitive company detail. If you require customisation, feel free to contact me as I update the documentation further. 
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -139,12 +136,10 @@ This is an example of how to list things you need to use the software and how to
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
-   ```
-3. Install NPM packages
+1. Install Docker on a Virtual Machine or Cloud instance
+2. Update the following files for your customisation
+  3. 
+4. Install NPM packages
    ```sh
    npm install
    ```
