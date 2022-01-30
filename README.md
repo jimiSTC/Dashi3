@@ -159,6 +159,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 - [x] Updated Readme file
 - [ ] Details on how to set up Tessitura to use this tool
 - [ ] Details on how to set up Redis on Docker for this tool
+- [ ] Update the acknowledgements to this passive side project
 
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
@@ -197,9 +198,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+
+Project Link: [https://github.com/jimiSTC/Dashi3](https://github.com/jimiSTC/Dashi3)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -208,7 +209,7 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
+Coming Soon!!!
 
 * [Choose an Open Source License](https://choosealicense.com)
 * [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
