@@ -124,29 +124,17 @@ This section should list any major frameworks/libraries used to bootstrap your p
 This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
-### Prerequisites
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
 
 ### Installation
 
 _Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
 
 1. Install Docker on a Virtual Machine or Cloud instance
-2. Update the following files for your customisation
-  3. 
-4. Install NPM packages
-   ```sh
-   npm install
-   ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+2. Update the SQL Plugin file for your instance of MSSQL along with your stored procedure command https://github.com/jimiSTC/Dashi3/blob/master/dashikombu/sqlPlugin.py
+3. Update the Django Settings file for allowed Hosts and Redis IP instance https://github.com/jimiSTC/Dashi3/blob/master/Dashi3/settings.py
+4. Create a .env file for your local username and password
+5. Static files located : https://github.com/jimiSTC/Dashi3/tree/master/static
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -168,11 +156,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 
 - [x] Add Changelog
 - [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [x] Updated Readme file
+- [ ] Details on how to set up Tessitura to use this tool
+- [ ] Details on how to set up Redis on Docker for this tool
+
 
 See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
 
