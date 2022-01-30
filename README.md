@@ -38,7 +38,7 @@ The setting should be at the bottom of the config
 <br />
 <div align="center">
   <a href="https://www.sydneytheatre.com.au">
-    <img src="https://d2wasljt46n4no.cloudfront.net/img/home-tiles/stc-logo-new.jpg" alt="Logo" width="80" height="80">
+    <img src="https://d2wasljt46n4no.cloudfront.net/img/home-tiles/stc-logo-new.jpg" alt="Logo" >
   </a>
 
   <h3 align="center">Best-README-Template</h3>
